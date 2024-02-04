@@ -3,10 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MINI PROYECTO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <script src="script.js"></script>
-    <p>hola</p>
+    <div class="text-bg-danger p-3">Gastronomia Peruana  Home    Recetas</div>
+    <h1 class="display-4 text-center">Blog de recetas de Comidas Peruanas</h1>
+    <p class="text-center">Recetas típicas y populares de la gastronomia peruana.</p>
+
+    <div class="corusel-container w-50 mx-auto my-3">
+        <div id="carouselExample" class="carousel slide ">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://cdn0.recetasgratis.net/es/posts/8/6/2/causa_limena_31268_orig.jpg" class="d-block w-100 alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://cdn0.recetasgratis.net/es/posts/9/8/0/ceviche_de_pescado_con_aji_amarillo_35089_600.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://cdn0.recetasgratis.net/es/posts/5/7/4/lomo_saltado_peruano_11475_600.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://cdn0.recetasgratis.net/es/posts/3/2/9/gallina_con_aji_26923_600.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+    </div>
+
+    <div class="container">   
+        <div class="card-deck mt-5">
+    
+          <div class="card text-center border-dark">
+            <img src="https://cdn0.recetasgratis.net/es/posts/8/6/2/causa_limena_31268_orig.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title text-danger">Causa Rellena</h4>
+              <p class="card-text">Hablar de la Causa Rellena es hablar de uno de los platos más tradicionales de la cocina peruana. 
+                Cuenta la historia que este plato ya se consumía en la época precolombina. 
+                En eso tiempos era una masa preparada a base de papa amrilla mezclada con ají amarillo. 
+                ¿Te gustaría prepararla? ¡Manos a la obra!  </p>
+              <a href="#" class="btn btn-danger">Ver Receta</a>
+            </div>
+          </div>          
+    
+          <div class="card text-center border-dark">
+            <img src="https://cdn0.recetasgratis.net/es/posts/9/8/0/ceviche_de_pescado_con_aji_amarillo_35089_600.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title text-danger">Ceviche De Pescado</h4>
+              <p class="card-text">El Ceviche de pescado peruano es el plato.
+                 tradicional por exelencia en el Perú. 
+                 Los peruanos lo consideramos nuestro plato bandera y nos sentimos especialmente orgullosos de él. 
+                ¡Y aquí tienes nuesta receta!  </p>
+              <a href="#" class="btn btn-danger">Ver Receta</a>
+            </div>
+          </div>            
+      
+          <div class="card text-center border-dark">
+            <img src="https://cdn0.recetasgratis.net/es/posts/5/7/4/lomo_saltado_peruano_11475_600.webp"class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title text-danger">Lomo Saltado</h4>
+              <p class="card-text">El Lomo Saltado está sin duda entre los principales y más solicitados platos
+                 de la gastronomía peruana y ocupa un lugar especial en la interminable lista de potajes que nacen 
+                 gracias a la fusión de la cocina peruana con otras cocinas del mundo, en este caso,
+                 la cocina oriental china.
+                 ¡Vamos a cocinar!</p>
+              <a href="#" class="btn btn-danger">Ver Receta</a>
+            </div>
+          </div>    
+          
+          <div class="card text-center border-dark">
+            <img src="https://cdn0.recetasgratis.net/es/posts/3/2/9/gallina_con_aji_26923_600.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title text-danger">Ají de Gallina</h4>
+              <p class="card-text">El Ají de Gallina es uno de los platos más populares del Perú que encanta a
+                 la mayoría de los paladares y además es un plato de fácil preparación, 
+                que lleva entre sus principales ingredientes nuestro preciado ají amarillo.
+                 ¡A comer! </p>
+              <a href="#" class="btn btn-danger">Ver Receta</a>
+            </div>
+          </div>    
+    
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
