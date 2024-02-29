@@ -1,4 +1,4 @@
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl)
-})
+import './firebase/signup_form.js';
+import './firebase/signin_form.js';
+import './firebase/googleLogin.js';
+import './firebase/logout.js';
