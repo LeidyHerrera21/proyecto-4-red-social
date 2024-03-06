@@ -20,3 +20,4 @@ export const loginCheck = user => {
     showMessage('logged out', 'orange');
  }
 }
+
