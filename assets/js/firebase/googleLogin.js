@@ -7,18 +7,28 @@ const googlebuttom = document.querySelector('#google-login')
 
 googlebuttom.addEventListener('click', async () =>{
 
-  const provider = new GoogleAuthProvider()
+    const provider = new GoogleAuthProvider();
 
- try {
-    const userCredentials = await signInWithPopup(auth, provider )
-    console.log(userCredentials);
+    // Forzar la selección de cuenta
+    provider.setCustomParameters({
+        prompt: 'select_account',
+    });
 
-    const modal = bootstrap.Modal.getInstance(document.querySelector('signin-modal'));
-    modal.hide();
+    try {
+        const credentials = await signInWithPopup(auth, provider)
+        console.log(credentials)
 
-    show_message("Welcome" + userCredentials.user.displayName)
+    
+        showMessage("Bienvenid@ " + credentials.user.displayName, "success");
 
- } catch (error) {
-    console.log(error)
- }
-});
+        setTimeout(() => {
+            localStorage.setItem("user", credentials.user);
+            window.location.href = "principal.html";
+        }, 2000);
+
+
+    } catch (error) {
+        console.log(error)
+    }
+
+})

@@ -6,24 +6,57 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box;
+}
+
+/* Estilos base de la navbar */
+.navbar {
+    background: linear-gradient(135deg, #fd9fdadc, #fc9696ea, #bd9bfdea, #b2e1f1e3);
+    width: 100%;
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
     list-style: none;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin: 0 15px;
+}
+
+/* Estilos para la búsqueda */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.lupa {
+    margin-right: 10px;
+}
+
+/* Estilos para el logo */
+.logo {
+    font-family: Cookie;
     text-decoration: none;
+    color: #000;
+    font-size: 45px;
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
 
-
-.container-fluid {
-   width: 100px;
-   height: 100px;
+.logo img {
+    margin-right: 10px;
+    width: 60px;
 }
-
 
 .dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
     cursor: pointer;
-    z-index: 1000;
+    display: flex;
+    align-items: center;
   }
   
   .dark-mode-toggle i {
@@ -48,23 +81,6 @@
     background: #333;
     color: #fff;
   }
-  
-
-.navbar-top{
-    background:linear-gradient(135deg, #fd9fdadc, #fc9696ea, #bd9bfdea, #b2e1f1e3); ;
-}
-
-.logo {
-    font-family: Cookie;
-    text-decoration: none;
-    color: #000;
-    font-size: 45px;
-    padding-left: 18px;
-    padding-top: 8px;
-    display: flex;
-    align-items: center;
-    margin: 0;
-}
 
 .top {
     display: flex;
@@ -73,7 +89,7 @@
 }
 
 .logo img {
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    margin-right: 10px;
     width: 60px;
 }
 
@@ -142,13 +158,61 @@
     color: #000;
 }
 
+#boton-publicar {
+    background-color: transparent; /* Fondo transparente */
+    color: #000; /* Color de texto */
+    padding: 8px 12px; /* Ajusta el padding para cambiar el tamaño del botón */
+    border: none;
+    cursor: pointer;
+}
+
+.cuadro-flotante {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 10;
+    display: none;
+}
+
+.cuadro-flotante form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuadro-flotante label {
+    margin-bottom: 5px;
+}
+
+.cuadro-flotante input,
+.cuadro-flotante textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.cuadro-flotante button {
+    color: #000; /* Cambia el color del texto si es necesario */
+    padding: 8px 12px; /* Ajusta el padding para cambiar el tamaño del botón */
+    border: none;
+    cursor: pointer;
+}
+
+.btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 .offcanvas-header{
     background: #c9448d;
     color: #000;
 }
 .offcanvas-body {
-    margin-top: 0;
+
     background:linear-gradient(135deg, #fd9fdadc, #fc9696ea, #bd9bfdea, #b2e1f1e3);
 }
 .profile {
@@ -237,14 +301,7 @@
 
 /* main home */
 
-.main-home{
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    padding: 5px;
-    padding-left: 10px;
-    align-items: center;
-}
+
 
 .bi {
     font-size: 20px;
@@ -348,7 +405,7 @@
 
 .post-box{
     width: 300px;
- 
+    margin-bottom: 20px;
 }
 
 .post-box img{
@@ -408,48 +465,23 @@
     margin-left: 7px;
 }
 
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Para la puclicaciones de la foto */
-#boton-publicar {
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .cuadro-flotante {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    z-index: 10;
-    visibility: hidden;
-  }
-  
-  .cuadro-flotante form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .cuadro-flotante label {
-    margin-bottom: 5px;
-  }
-  
-  .cuadro-flotante input,
-  .cuadro-flotante textarea {
-    padding: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
-  .cuadro-flotante button {
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav li {
+        margin: 10px 0;
+    }
+
+    .search {
+        margin-top: 10px;
+    }
 }

@@ -26,6 +26,7 @@ signupForm.addEventListener('submit', async (e) => {
 
     setTimeout(() => {
         window.location.href = "principal.html";
+        
     }, 2000);
 
     } catch (error) {
