@@ -47,3 +47,9 @@ aboutTitles.forEach(title => {
         aboutItem.classList.toggle('active'); 
     });
 });
+
+/* barra de busquedad */
+document.getElementById("search-button").addEventListener("click", function () {
+        let query = document.getElementById("search-bar").value;
+        alert("Búsqueda: " + query); // Puedes reemplazar esto con la funcionalidad deseada
+    });
