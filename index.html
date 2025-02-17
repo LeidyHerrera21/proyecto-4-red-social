@@ -1,121 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instbook</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    <link rel="icon" href="assets/img/logo.png"/>
-    <link rel="stylesheet" href="assets/css/styles.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="description"
+        content="FUNDADES - Fundación para el Desarrollo Sostenible. Promovemos proyectos sociales para mejorar la calidad de vida de personas vulnerables en el Perú.">
+    <meta name="keywords"
+        content="FUNDADES, desarrollo sostenible, Perú, proyectos sociales, discapacidad, salud, niñez, educación, trabajo">
+    <meta name="author" content="FUNDADES">
+    <title>FUNDADES - Desarrollo Sostenible en el Perú</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <img src="assets/img/logo.png" alt="logo">
-            <a class="navbar-brand" href="#">Instbook</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link-inicio" href="#" data-bs-toggle="modal" data-bs-target="#signin-modal">Iniciar Sesión</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link-registro" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Registrarse</a>
-              </li>
-            </ul>
-          </div>
+    
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="img/logo-Fundades-web-2020.png" alt="Logo de FUNDADES" class="logo">
+            </div>
+            <nav aria-label="Menú principal">
+                
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#unete">Únete a Nosotros</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
         </div>
-      </nav>
-  <!-- Iniciar Sesion -->
-  <div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable d-flex justify-content-center align-items-end">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">
-            <i class="bi bi-person">
-              Inicia Sesión</i>
-          </h1>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="signin-form">
-            <label for="email-signin" class="mb-1 text-light">
-              <i class="bi bi-envelope-at">
-                Correo</i>
-            </label>
-            <input id="email-signin" type="email" class="form-control mb-3" placeholder="Correo electrónico" required>
-            <label for="password-signin" for="password-signin" class="mb-1 text-light">
-              <i class="bi bi-bag-dash">
-                Contraseña</i>
-            </label>
-            <input id="password-signin" type="password" class="form-control mb-3" placeholder="******" required>
-            <button type="submit" class="btn btn-indigo form-control mb-2 text-dark">
-              <a class="nav-link-login" href="#" data-bs-toggle="modal" data-bs-target="#signin-modal">Iniciar Sesión</a>
-            </button>
-            <hr class="text-light"/>
-            <button type="button" id="google-login" class="btn btn-indigo">
-              <i class="bi bi-google">
-                Google</i></button>
-              
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Registrarse modal -->
-  <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable d-flex justify-content-center align-items-end">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">
-            <i class="bi bi-person">
-              Regístrate</i>
-          </h1>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="signup-form">
-            <label for="email-signup" class="mb-1 text-light">
-              <i class="bi bi-envelope-at">
-                Correo</i>
-            </label>
-            <input id="email-signup" type="email" class="form-control mb-3" placeholder="Correo Electrónico" required>
-            <label for="password-signup" class="mb-1 text-light">
-              <i class="bi bi-bag-dash">
-                Contraseña</i>
-            </label>
-            <input id="password-signup" type="password" class="form-control mb-3" placeholder="******" required>
+<!-- Botón de inicio de sesión con Google -->
+        <button id="login-google">Iniciar sesión</button>
 
-            <label for="usuario-signup" class="mb-1 text-light">
-              <i class="bi bi-person-circle">
-                Nombre de Usuario
-              </i>
-            </label>
-            <input id="usuario-signup" type="usuario" class="form-control mb-3" placeholder="Ej: Anx12" required>
+<!--Botón de daltonismo-->
+        <button id="modo-daltonismo">Modo Daltonismo</button>
+        
+    </header>
 
-            <label for="password2-signup" class="mb-1 text-light">
-              <i class="bi bi-bag-check">
-                Contraseña
-              </i>
-            </label>
-            <input id="password2-signup" type="password2" class="form-control mb-3" placeholder="******" required>
-            <button type="submit" class="btn btn-indigo">Registrarse</button>
-          </form>
+    <section id="inicio" class="hero">
+        <div class="hero-images">
+            <div class="hero-image active" style="background-image: url('img/gettyimages-1192468274-2048x2048.jpg');"></div>
+            <div class="hero-image" style="background-image: url('img/gettyimages-1250476306-2048x2048.jpg');"></div>
+            <div class="hero-image" style="background-image: url('img/gettyimages-487536795-2048x2048.jpg');"></div>
+             <div class="hero-image" style="background-image: url('img/gettyimages-1345489103-2048x2048.jpg');"></div>
+            <div class="hero-overlay"></div>
         </div>
-      </div>
-    </div>
-  </div>
-  <script src="assets/js/script.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <div class="container">
+            <h1>Bienvenidos a FUNDADES</h1>
+            <p>Comprometidos con mejorar la calidad de vida de las personas más vulnerables en el Perú.</p>
+            <a href="#nosotros" class="btn">Conócenos más</a>
+        </div>
+    </section>
+
+    <button id="chatbot-button">Ir al Chat IA</button>
+
+    <script>
+        document.getElementById("chatbot-button").addEventListener("click", function () {
+            window.location.href = "chat.html"; // Redirige a la página del chat
+        });
+    </script>
+
+    <section id="nosotros" class="about">
+        <div class="container1">
+            <h2>Nosotros</h2>
+            <p>FUNDADES es una organización sin fines de lucro que tiene como objetivo contribuir a mejorar la calidad
+                de vida de personas vulnerables, especialmente de personas con discapacidad, a través de la promoción y
+                ejecución de actividades y proyectos sociales relacionados con:</p>
+            <div class="about-grid">
+                <div class="about-item">
+                    <h3 class="about-title">Salud</h3>
+                    <div class="about-content">
+                        <p>Implementamos programas de salud para garantizar el bienestar físico y emocional de las
+                            personas más vulnerables.</p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <h3 class="about-title">Niñez en Abandono</h3>
+                    <div class="about-content">
+                        <p>Trabajamos para proteger y brindar oportunidades a niños y niñas en situación de abandono.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <h3 class="about-title">Educación</h3>
+                    <div class="about-content">
+                        <p>Promovemos el acceso a una educación inclusiva y de calidad para todos.</p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <h3 class="about-title">Trabajo</h3>
+                    <div class="about-content">
+                        <p>Fomentamos la inclusión laboral de personas con discapacidad y otros grupos vulnerables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2>Nuestros Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="proyecto1.jpg" alt="Proyecto de salud comunitaria">
+                    <h3>Salud Comunitaria</h3>
+                    <p>Programas de atención médica y prevención de enfermedades en comunidades vulnerables.</p>
+                </div>
+                <div class="project-item">
+                    <img src="proyecto2.jpg" alt="Proyecto de apoyo a la niñez">
+                    <h3>Apoyo a la Niñez</h3>
+                    <p>Protección y desarrollo integral de niños y niñas en situación de abandono.</p>
+                </div>
+                <div class="project-item">
+                    <img src="proyecto3.jpg" alt="Proyecto de educación inclusiva">
+                    <h3>Educación Inclusiva</h3>
+                    <p>Talleres y programas educativos para personas con discapacidad y otros grupos vulnerables.
+                    </p>
+                </div>
+                <div class="project-item">
+                    <img src="proyecto4.jpg" alt="Proyecto de inclusión laboral">
+                    <h3>Inclusión Laboral</h3>
+                    <p>Capacitación y empleo para personas con discapacidad y otros grupos en situación de
+                        vulnerabilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="unete" class="join">
+        <div class="container">
+            <h2>Únete a Nosotros</h2>
+            <p>En FUNDADES, creemos en la inclusión laboral de personas con discapacidad. Si estás buscando
+                oportunidades laborales, sube tu currículum y forma parte de nuestra red de talentos.</p>
+            <form id="cv-form" action="submit_cv.php" method="post" enctype="multipart/form-data"
+                aria-labelledby="unete">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required aria-required="true">
+
+                <label for="cv">Subir CV (PDF o Word):</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required aria-required="true">
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section id="noticias" class="news">
+        <div class="container">
+            <h2>Noticias</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <img src="noticia1.jpg" alt="FUNDADES recibe premio por inclusión laboral">
+                    <h3>FUNDADES recibe premio por inclusión laboral</h3>
+                    <p>Reconocimiento a nuestra labor en la promoción de la inclusión laboral.</p>
+                    <a href="#" class="btn">Leer más</a>
+                </article>
+                <article class="news-item">
+                    <img src="noticia2.jpg" alt="Nuevo proyecto de salud comunitaria">
+                    <h3>Nuevo proyecto de salud comunitaria</h3>
+                    <p>Iniciamos un nuevo proyecto para brindar atención médica en zonas rurales.</p>
+                    <a href="#" class="btn">Leer más</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>¿Qué es FUNDADES?</h3>
+                    <p>FUNDADES es una organización sin fines de lucro dedicada a mejorar la calidad de vida de
+                        personas vulnerables, especialmente de personas con discapacidad.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cómo puedo colaborar?</h3>
+                    <p>Puedes colaborar como voluntario, donante o participando en nuestros proyectos.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Dónde están ubicados?</h3>
+                    <p>Nuestra sede principal está en Lima, pero trabajamos en todo el Perú.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cómo contacto a FUNDADES?</h3>
+                    <p>Puedes contactarnos a través del formulario de contacto en esta página.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="contact-form" action="submit_form.php" method="post" aria-labelledby="contacto">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 FUNDADES. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="img/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="assets/js/firebase.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/daltonismo.js"></script>
+    <script src="assets/js/barraBusquedad.js"</script>
+    
 </body>
+
 </html>
