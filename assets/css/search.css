@@ -60,12 +60,3 @@
     color: #00485E;
 }
 
- /* Modo de Daltonismo */
-    .colorblind-mode .search {
-        border-color: #FFD700;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FFD700;
-    }
-
-    .colorblind-mode .search::placeholder {
-        color: #000;
-    }
