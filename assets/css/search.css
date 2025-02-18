@@ -8,7 +8,6 @@
     align-items: center;
     background: transparent;
     border-radius: 35px;
-    color: #000000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FCCB00;
     padding: 5px;
 }
@@ -18,7 +17,7 @@
     position: absolute;
     top: 108%;
     left: 50%;
-    color: #black;
+    color: black;
     color-text: black;
     font-size: 16px;
     background: transparent;
@@ -33,7 +32,7 @@
 }
 
 #search-bar::placeholder {
-    color: black;
+    text-color: black;
     opacity: 0;
     transition: opacity 150ms ease-out;
 }
