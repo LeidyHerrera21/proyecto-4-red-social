@@ -1,8 +1,5 @@
 /* Contenedor de la barra de búsqueda */
 .search-container {
-    position: absolute;
-    top: 108%;
-    left: 60%;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
@@ -31,7 +28,7 @@
 }
 
 #search-bar::placeholder {
-    color: #000000;
+    color: #fff;
     opacity: 0;
     transition: opacity 150ms ease-out;
 }
