@@ -14,7 +14,7 @@
 
 /* Input de búsqueda */
 #search-bar {
-    color: #fff;
+    /*color: #fff;
     font-size: 16px;
     background: transparent;
     width: 25px;
@@ -24,7 +24,17 @@
     outline: none;
     border-radius: 35px;
     transition: all 0.5s;
-    box-shadow: none;
+    box-shadow: none;*/
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FCCB00;
+    padding: 5px;
 }
 
 #search-bar::placeholder {
