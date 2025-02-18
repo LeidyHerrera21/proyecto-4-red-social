@@ -12,44 +12,46 @@
     <title>FUNDADES - Desarrollo Sostenible en el Perú</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/search.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    
+
     <header>
         <div class="container">
             <div class="logo-container">
                 <img src="img/logo-Fundades-web-2020.png" alt="Logo de FUNDADES" class="logo">
             </div>
             <nav aria-label="Menú principal">
-                
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
                     <li><a href="#unete">Únete a Nosotros</a></li>
-                    <li><a href="#faq">Preguntas Frecuentes</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+            <!-- Botón de Google y switch aquí -->
+            <button id="login-google" class="google-btn">
+                <img src="img/descarga.png" alt="Google Logo">
+                Iniciar sesión con Google
+            </button>
+
+            <label class="switch">
+                <input type="checkbox" id="modo-daltonismo">
+                <span class="slider"></span>
+            </label>
         </div>
-
-<!-- Botón de inicio de sesión con Google -->
-        <button id="login-google">Iniciar sesión</button>
-
-<!--Botón de daltonismo-->
-        <button id="modo-daltonismo">Modo Daltonismo</button>
-        
     </header>
 
     <section id="inicio" class="hero">
         <div class="hero-images">
-            <div class="hero-image active" style="background-image: url('img/gettyimages-1192468274-2048x2048.jpg');"></div>
+            <div class="hero-image active" style="background-image: url('img/gettyimages-1192468274-2048x2048.jpg');">
+            </div>
             <div class="hero-image" style="background-image: url('img/gettyimages-1250476306-2048x2048.jpg');"></div>
             <div class="hero-image" style="background-image: url('img/gettyimages-487536795-2048x2048.jpg');"></div>
-             <div class="hero-image" style="background-image: url('img/gettyimages-1345489103-2048x2048.jpg');"></div>
+            <div class="hero-image" style="background-image: url('img/gettyimages-1345489103-2048x2048.jpg');"></div>
             <div class="hero-overlay"></div>
         </div>
         <div class="container">
@@ -59,19 +61,15 @@
         </div>
     </section>
 
-<!-- Barra de búsqueda -->
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Buscar...">
-            <button id="search-button">🔍</button>
-        </div>
-    
+    <!-- Barra de búsqueda -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Buscar...">
+        <button id="search-button">🔍</button>
+    </div>
+
     <button id="chatbot-button">Ir al Chat IA</button>
 
-    <script>
-        document.getElementById("chatbot-button").addEventListener("click", function () {
-            window.location.href = "chat.html"; // Redirige a la página del chat
-        });
-    </script>
+
 
     <section id="nosotros" class="about">
         <div class="container1">
@@ -109,41 +107,41 @@
             </div>
         </div>
     </section>
-
+    <br><br>
 
     <section id="proyectos" class="projects">
         <div class="container">
             <h2>Nuestros Proyectos</h2>
             <div class="projects-grid">
                 <div class="project-item">
-                    <img src="proyecto1.jpg" alt="Proyecto de salud comunitaria">
+                    <img src="img/gettyimages-1192468274-2048x2048.jpg" alt="Proyecto de salud comunitaria">
                     <h3>Salud Comunitaria</h3>
                     <p>Programas de atención médica y prevención de enfermedades en comunidades vulnerables.</p>
                 </div>
                 <div class="project-item">
-                    <img src="proyecto2.jpg" alt="Proyecto de apoyo a la niñez">
+                    <img src="img/gettyimages-1250476306-2048x2048.jpg" alt="Proyecto de apoyo a la niñez">
                     <h3>Apoyo a la Niñez</h3>
                     <p>Protección y desarrollo integral de niños y niñas en situación de abandono.</p>
                 </div>
                 <div class="project-item">
-                    <img src="proyecto3.jpg" alt="Proyecto de educación inclusiva">
+                    <img src="img/gettyimages-1250476306-2048x2048.jpg" alt="Proyecto de educación inclusiva">
                     <h3>Educación Inclusiva</h3>
                     <p>Talleres y programas educativos para personas con discapacidad y otros grupos vulnerables.
                     </p>
                 </div>
                 <div class="project-item">
-                    <img src="proyecto4.jpg" alt="Proyecto de inclusión laboral">
+                    <img src="img/gettyimages-1192468274-2048x2048.jpg" alt="Proyecto de inclusión laboral">
                     <h3>Inclusión Laboral</h3>
                     <p>Capacitación y empleo para personas con discapacidad y otros grupos en situación de
                         vulnerabilidad.</p>
                 </div>
             </div>
         </div>
-    </section>
-
+    </section> <br><br>
 
     <section id="unete" class="join">
         <div class="container">
+            
             <h2>Únete a Nosotros</h2>
             <p>En FUNDADES, creemos en la inclusión laboral de personas con discapacidad. Si estás buscando
                 oportunidades laborales, sube tu currículum y forma parte de nuestra red de talentos.</p>
@@ -165,90 +163,30 @@
             </form>
         </div>
     </section>
+    <br><br>
 
-
-    <section id="noticias" class="news">
-        <div class="container">
-            <h2>Noticias</h2>
-            <div class="news-grid">
-                <article class="news-item">
-                    <img src="noticia1.jpg" alt="FUNDADES recibe premio por inclusión laboral">
-                    <h3>FUNDADES recibe premio por inclusión laboral</h3>
-                    <p>Reconocimiento a nuestra labor en la promoción de la inclusión laboral.</p>
-                    <a href="#" class="btn">Leer más</a>
-                </article>
-                <article class="news-item">
-                    <img src="noticia2.jpg" alt="Nuevo proyecto de salud comunitaria">
-                    <h3>Nuevo proyecto de salud comunitaria</h3>
-                    <p>Iniciamos un nuevo proyecto para brindar atención médica en zonas rurales.</p>
-                    <a href="#" class="btn">Leer más</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2>Preguntas Frecuentes</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>¿Qué es FUNDADES?</h3>
-                    <p>FUNDADES es una organización sin fines de lucro dedicada a mejorar la calidad de vida de
-                        personas vulnerables, especialmente de personas con discapacidad.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Cómo puedo colaborar?</h3>
-                    <p>Puedes colaborar como voluntario, donante o participando en nuestros proyectos.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Dónde están ubicados?</h3>
-                    <p>Nuestra sede principal está en Lima, pero trabajamos en todo el Perú.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>¿Cómo contacto a FUNDADES?</h3>
-                    <p>Puedes contactarnos a través del formulario de contacto en esta página.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2>Contacto</h2>
-            <form id="contact-form" action="submit_form.php" method="post" aria-labelledby="contacto">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required aria-required="true">
-
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required aria-required="true">
-
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-
-    <footer>
+   
+ <footer>
         <div class="container">
             <p>&copy; 2023 FUNDADES. Todos los derechos reservados.</p>
             <div class="social-links">
-                <a href="#" aria-label="Facebook"><img src="img/facebook-icon.png" alt="Facebook"></a>
-                <a href="#" aria-label="Twitter"><img src="img/twitter-icon.png" alt="Twitter"></a>
-                <a href="#" aria-label="Instagram"><img src="img/instagram-icon.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/grupofundades" target="_blank" aria-label="Facebook">
+                    <img src="img/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/company/grupo-fundades-peru" target="_blank" aria-label="Twitter">
+                    <img src="img/images.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/grupofundades/" target="_blank" aria-label="Instagram">
+                    <img src="img/instagram-icon.png" alt="Instagram">
+                </a>
             </div>
         </div>
     </footer>
-
     <script type="module" src="assets/js/firebase.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/daltonismo.js"></script>
-    <script src="assets/js/barraBusquedad.js"</script>
-    
+
+
 </body>
 
 </html>
