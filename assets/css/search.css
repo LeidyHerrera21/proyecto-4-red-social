@@ -14,6 +14,9 @@
 
 /* Input de búsqueda */
 #search-bar {
+    position: absolute;
+    top: 108%;
+    left: 50%;
     color: #fff;
     font-size: 16px;
     background: transparent;
