@@ -14,3 +14,11 @@ document.getElementById("modo-daltonismo").addEventListener("click", () => {
 if (localStorage.getItem("modoDaltonismo") === "activado") {
     document.body.classList.add("daltonismo");
 }
+
+// JavaScript para Activar Modo Daltonismo//
+function toggleColorblindMode() {
+        document.body.classList.toggle("colorblind-mode");
+    }
+
+// Botón para Activar Modo Daltonismo //
+<button onclick="toggleColorblindMode()">Modo Daltonismo</button>
