@@ -1,7 +1,7 @@
-// Importar Firebase
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { getAnalytics } from "firebase/analytics";
+// Importar Firebase desde la CDN
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
 // Configuración de Firebase
 const firebaseConfig = {
@@ -17,35 +17,24 @@ const firebaseConfig = {
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth();
+const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-const auth = firebase.auth();
-
-// Crear botón de inicio de sesión en la parte superior derecha
+// Esperar a que el DOM cargue
 document.addEventListener("DOMContentLoaded", () => {
-    const loginButton = document.createElement("button");
-    loginButton.id = "login-google";
-    loginButton.textContent = "Iniciar sesión con Google";
-    loginButton.style.position = "absolute";
-    loginButton.style.top = "10px";
-    loginButton.style.right = "10px";
-    loginButton.style.padding = "10px 15px";
-    loginButton.style.backgroundColor = "#00485E";
-    loginButton.style.color = "white";
-    loginButton.style.border = "none";
-    loginButton.style.borderRadius = "5px";
-    loginButton.style.cursor = "pointer";
-    document.body.appendChild(loginButton);
-
-// Función para iniciar sesión con Google
-document.getElementById("login-google").addEventListener("click", () => {
-    signInWithPopup(auth, provider)
-        .then((result) => {
-            console.log("Usuario autenticado:", result.user);
-            alert(`Bienvenido, ${result.user.displayName}`);
-        })
-        .catch((error) => {
-            console.error("Error en autenticación:", error);
+    const loginButton = document.getElementById("login-google");
+    
+    if (loginButton) {
+        loginButton.addEventListener("click", () => {
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    console.log("Usuario autenticado:", result.user);
+                    alert(`Bienvenido, ${result.user.displayName}`);
+                })
+                .catch((error) => {
+                    console.error("Error en autenticación:", error);
+                    alert("Error en autenticación, revisa la consola.");
+                });
         });
+    }
 });
