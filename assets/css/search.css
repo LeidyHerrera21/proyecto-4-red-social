@@ -1,9 +1,8 @@
 /* Contenedor de la barra de búsqueda */
 .search-container {
-    color: #000000;
     position: absolute;
-    top: 108%;
-    left: 60%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
@@ -15,10 +14,7 @@
 
 /* Input de búsqueda */
 #search-bar {
-    position: absolute;
-    top: 108%;
-    left: 60%;
-    color: #000000;
+    color: #fff;
     font-size: 16px;
     background: transparent;
     width: 25px;
@@ -32,18 +28,16 @@
 }
 
 #search-bar::placeholder {
-    color: #000000;
+    color: #efefef;
     opacity: 0;
     transition: opacity 150ms ease-out;
 }
 
 #search-bar:focus::placeholder {
-    color: #000000;
     opacity: 1;
 }
 
 #search-bar:focus, #search-bar:not(:placeholder-shown) {
-    color: #000000;
     width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FCCB00;
 }
