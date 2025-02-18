@@ -62,57 +62,57 @@ header h1 {
     border-radius: 5px;
 }
 
-/* Mensajes */
-.message {
+/* Mensajes del chat */
+.user-message {
+    background: #FCCB00;
+    color: #00485E;
     padding: 8px 12px;
     border-radius: 5px;
     margin: 5px 0;
     max-width: 80%;
-    word-wrap: break-word;
-}
-
-.user-message {
-    background: #FCCB00;
-    color: #00485E;
     align-self: flex-end;
     text-align: right;
+    font-weight: bold;
 }
 
 .bot-message {
     background: #00485E;
     color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 5px 0;
+    max-width: 80%;
     align-self: flex-start;
 }
 
-/* Entrada de texto */
-.chat-input {
+/* Botones de preguntas frecuentes */
+#faq-options {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
 }
 
-#user-input {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid #00485E;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#send-button {
-    background-color: #00485E;
-    color: white;
+.faq-button {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 5px 0;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
     border-radius: 5px;
-    margin-left: 10px;
+    cursor: pointer;
+    background: #00485E;
+    color: white;
     font-size: 16px;
+    text-align: center;
+    transition: background 0.3s ease;
 }
 
-#send-button:hover {
-    background-color: #003247;
+.faq-button:hover {
+    background: #34a853;
 }
 
+/* Botón de modo daltonismo */
 #modo-daltonismo {
     position: absolute;
     top: 10px;
@@ -134,10 +134,19 @@ header h1 {
 /* Estilos para el modo daltonismo */
 .daltonismo {
     filter: contrast(120%) sepia(50%);
-    background-color: #FFF5E1 !important; /* Fondo más claro */
-    color: #000 !important; /* Texto en negro */
+    background-color: #FFF5E1 !important;
+    color: #000 !important;
 }
 
 .daltonismo a {
-    color: #0033A0 !important; /* Enlaces en azul fuerte */
+    color: #0033A0 !important;
+}
+.bot-message a {
+    color: #fff5f5 !important; /* Color amarillo para destacar */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bot-message a:hover {
+    color: #34a853 !important; /* Color verde cuando pasas el cursor */
 }
