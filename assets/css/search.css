@@ -1,39 +1,44 @@
-.search { position: absolute; 
-         top: 107%; 
-         left: 60%; 
-         transform: translate(-50%,-50%);
-         color: #fff; font-size: 16px;
-         background: transparent; 
-         width: 25px; 
-         height: 25px; 
-         padding: 10px; 
-         border: 3px solid #00485E; 
-         outline: none;
-         border-radius: 35px; 
-         transition: all 0.5s;
-         box-shadow: 0 4px 8px 0 rgba(0, 0,0,0.2), 0 6px 20px 0 #FCCB00; 
-        } 
+/* Contenedor fijo para que no se mueva */
+    .search-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+    }
 
-.search::placeholder{ 
-    color: #efefef; 
-    opacity: 0;
-    transición:opacidad 150ms salida fácil;
-} 
+/* Diseño de la barra de búsqueda */
+    .search {
+        color: #fff;
+        font-size: 16px;
+        background: transparent;
+        width: 25px;
+        height: 25px;
+        padding: 10px;
+        border: 3px solid #00485E;
+        outline: none;
+        border-radius: 35px;
+        transition: width 0.5s, box-shadow 0.5s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px #FCCB00;
+    }
 
-.search:focus::placeholder{ 
-    opacidad: 1; 
-} 
+    /* Estilos cuando la barra de búsqueda está en uso */
+    .search:focus,
+    .search:not(:placeholder-shown) {
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px #FCCB00;
+    }
 
-#search:hover{ 
-    box-shadow: 0 4px 8px 0 rgba(0, 0,0,0.2),
-        0 6px 20px 0 #00485E;
-} 
+    /* Estilos del botón de búsqueda */
+    #search-button {
+        background: transparent;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
 
-entrada:focus, 
-#search:not(:placeholder-shown){ 
-    ancho: 250px; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0,0,0.2), 
-    0 6px 20px 0 #FCCB00; 
-} 
-
-
+    #search-button:hover {
+        color: #FCCB00;
+    }
