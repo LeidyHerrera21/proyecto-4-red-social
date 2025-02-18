@@ -1,16 +1,19 @@
-// Funcionalidad del modo daltonismo
-document.getElementById("modo-daltonismo").addEventListener("click", () => {
-    document.body.classList.toggle("daltonismo");
+document.addEventListener("DOMContentLoaded", () => {
+    const botonDaltonismo = document.getElementById("modo-daltonismo");
 
-    // Guardar preferencia en LocalStorage
-    if (document.body.classList.contains("daltonismo")) {
-        localStorage.setItem("modoDaltonismo", "activado");
-    } else {
-        localStorage.removeItem("modoDaltonismo");
+    // Cargar preferencia al iniciar la página
+    if (localStorage.getItem("modoDaltonismo") === "activado") {
+        document.body.classList.add("daltonismo");
+        botonDaltonismo.checked = true;
     }
-});
 
-// Cargar preferencia al iniciar la página
-if (localStorage.getItem("modoDaltonismo") === "activado") {
-    document.body.classList.add("daltonismo");
-}
+    botonDaltonismo.addEventListener("change", () => {
+        document.body.classList.toggle("daltonismo");
+
+        if (document.body.classList.contains("daltonismo")) {
+            localStorage.setItem("modoDaltonismo", "activado");
+        } else {
+            localStorage.removeItem("modoDaltonismo");
+        }
+    });
+});
