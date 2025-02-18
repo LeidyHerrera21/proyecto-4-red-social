@@ -1,69 +1,39 @@
-/* Contenedor de la barra de búsqueda */
-.search-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    background: transparent;
-    border-radius: 35px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FCCB00;
-    padding: 5px;
-}
+.search { position: absolute; 
+         top: 50%; 
+         left: 50%; 
+         transform: translate(-50%,-50%);
+         color: #fff; font-size: 16px;
+         background: transparent; 
+         width: 25px; 
+         height: 25px; 
+         padding: 10px; 
+         border: 3px solid #00485E; 
+         outline: none;
+         border-radius: 35px; 
+         transition: all 0.5s;
+         box-shadow: 0 4px 8px 0 rgba(0, 0,0,0.2), 0 6px 20px 0 #FCCB00; 
+        } 
 
-/* Input de búsqueda */
-#search-bar {
-    /*color: #fff;
-    font-size: 16px;
-    background: transparent;
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    border: 3px solid #00485E;
-    outline: none;
-    border-radius: 35px;
-    transition: all 0.5s;
-    box-shadow: none;*/
-     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    background: transparent;
-    border-radius: 35px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FCCB00;
-    padding: 5px;
-}
-
-#search-bar::placeholder {
-    color: #efefef;
+.search::placeholder{ 
+    color: #efefef; 
     opacity: 0;
-    transition: opacity 150ms ease-out;
-}
+    transición:opacidad 150ms salida fácil;
+} 
 
-#search-bar:focus::placeholder {
-    opacity: 1;
-}
+.search:focus::placeholder{ 
+    opacidad: 1; 
+} 
 
-#search-bar:focus, #search-bar:not(:placeholder-shown) {
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FCCB00;
-}
+#search:hover{ 
+    box-shadow: 0 4px 8px 0 rgba(0, 0,0,0.2),
+        0 6px 20px 0 #00485E;
+} 
 
-/* Botón de búsqueda */
-#search-button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    color: #FCCB00;
-    margin-left: 5px;
-    transition: color 0.3s;
-}
+entrada:focus, 
+#search:not(:placeholder-shown){ 
+    ancho: 250px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0,0,0.2), 
+    0 6px 20px 0 #FCCB00; 
+} 
 
-#search-button:hover {
-    color: #00485E;
-}
 
