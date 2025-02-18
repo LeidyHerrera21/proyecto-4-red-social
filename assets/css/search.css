@@ -19,7 +19,7 @@
     top: 108%;
     left: 50%;
     color: #000000;
-    color-text: #000000;
+    color-text: black;
     font-size: 16px;
     background: transparent;
     width: 25px;
@@ -39,13 +39,13 @@
 }
 
 #search-bar:focus::placeholder {
-    color: #000000;
+    color: #black;
     opacity: 1;
 }
 
 #search-bar:focus, #search-bar:not(:placeholder-shown) {
     width: 250px;
-    color: #000000;
+    color: #black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #FCCB00;
 }
 
