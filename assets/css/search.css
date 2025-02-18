@@ -1,7 +1,7 @@
 /* Contenedor de la barra de búsqueda */
 .search-container {
     position: absolute;
-    top: 50%;
+    top: 108%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
