@@ -7,7 +7,6 @@
     --white: #ffffff;
 }
 
-
 body {
     font-family: 'Azbuka Pro Regular', Azbuka Pro Bold;
     margin: 0;
@@ -15,19 +14,24 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-light);
+    position: relative;
+    
 }
 
 .container {
     width: 100%;
-    /* Ancho ajustado */
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 10px;
     font-size: 23px;
     height: auto;
-    /* Altura ajustada */
     position: relative;
-    /* Posicionamiento normal */
+font-size: 50px;
+}
+
+.container3{
+
+    font-size: 80px;
 }
 
 header {
@@ -36,7 +40,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    /* Asegúrate de que este valor sea adecuado */
     background-color: transparent;
     transition: background-color 0.3s ease;
 }
@@ -48,9 +51,9 @@ header {
     display: inline-block;
     width: 65px;
     right: 1px;
-    top:530px;
+    top:700px;
     /* Ajusta la altura */
-    right: 1290px;
+    left: 20px;
     /* Mueve el contenedor a la derecha */
     display: flex;
     border-radius: 45px;
@@ -96,7 +99,7 @@ header {
 
 /* Estado activado */
 input:checked+.slider {
-    background-color: #ffaa00;
+    background-color: #eebb54;
 }
 
 /* Mueve el círculo y cambia icono */
@@ -147,7 +150,7 @@ header.scrolled {
     position: relative;
     top: 50px;
     /* Ajusta la altura */
-    left: 20px;
+    left: 60px;
     /* Mueve el contenedor a la derecha */
     display: flex;
     align-items: center;
@@ -158,6 +161,7 @@ header.scrolled {
 .logo {
     height: 60px;
     width: 250px;
+
 }
 
 nav ul {
@@ -270,24 +274,25 @@ nav ul li a:hover {
     background: var(--accent-color);
 }
 
+
 .container1 {
     color: black;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    font-size: 30px;
 }
 
 .about {
     padding: 50px 0;
-    background: #fff;
+    background: var(--white);
 }
 
 .about-grid {
-     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas del mismo tamaño */
-    gap: 20px; /* Espacio entre las tarjetas */
-    padding: 20px;
+    display: grid;
+  
+    gap: 20px;
 }
 
 .about-item {
@@ -299,32 +304,29 @@ nav ul li a:hover {
 }
 
 .about-title {
-    color: #FCCB00; /* Amarillo */
-}
-
-.about-title h3 {
     margin: 0;
     font-size: 1.5rem;
-    font-family: 'Azbuka Pro Regular', 'Azbuka Pro Bold', sans-serif;
-    color: inherit; /* Hereda el color amarillo */
+    color: white;
 }
 
 .about-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease, padding 0.5s ease;
+    font-size: 20px;
 }
 
 .about-content p {
     margin: 10px 0 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--text-color);
+    font-size: 25px;
 }
 
 .about-item.active .about-content {
     max-height: 200px;
     padding-top: 10px;
-}}
+}
 
 
 .news {
@@ -435,13 +437,19 @@ footer {
         display: flex;
     }
 
-    .about-grid,
-    .projects-grid,
-    .news-grid,
-    .faq-grid {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 .join {
@@ -517,7 +525,7 @@ footer {
     align-items: center;
     background-color: #000000;
     color: #fffdfd;
-    border: 5px solid #ddd;
+    border: 5px solid #020101;
     border-radius: 55px;
     padding: 10px 20px;
     font-size: 15px;
@@ -528,7 +536,7 @@ footer {
     position: absolute;
     top: 10px;
     /* Ajusta la altura */
-    right: 40px;
+    right: 10px;
     /* Mueve el contenedor a la derecha */
     display: flex;
     border-radius: 45px;
@@ -558,13 +566,14 @@ footer {
     /* Dos columnas */
     gap: 20px;
     /* Espacio entre elementos */
+    font-size:25px ;
 }
 
 .project-item {
     background: var(--background-light);
     padding: 20px;
     border-radius: 5px;
-    overflow: hidden;
+    
     /* Evita que las imágenes se desborden */
 }
 
@@ -581,13 +590,18 @@ footer {
 
 .project-item h3 {
     margin: 15px 0 10px;
-    font-size: 1.5rem;
-    color: #FCCB00;
+    font-size: 30px;
+    color: white;
+    
 }
 
 .project-item p {
-    font-size: 1.3rem;
+    font-size: 20px;
     color: var(--text-color);
+}
+
+.container2{
+    font-size: 30px;
 }
 
 /* Botón flotante - Aumentar texto */
