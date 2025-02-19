@@ -298,11 +298,15 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+.about-title {
+    color: #FCCB00; /* Amarillo */
+}
+
 .about-title h3 {
     margin: 0;
     font-size: 1.5rem;
-    font-family: 'Azbuka Pro Regular', Azbuka Pro Bold;
-    color: #FCCB00;
+    font-family: 'Azbuka Pro Regular', 'Azbuka Pro Bold', sans-serif;
+    color: inherit; /* Hereda el color amarillo */
 }
 
 .about-content {
