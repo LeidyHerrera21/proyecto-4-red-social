@@ -301,7 +301,7 @@ nav ul li a:hover {
 .about-title h3 {
     margin: 0;
     font-size: 1.5rem;
-    text-color: #FCCB00;
+    color: #FCCB00(--text-color);
     font-family: 'Azbuka Pro Regular', Azbuka Pro Bold;
 }
 
@@ -313,7 +313,7 @@ nav ul li a:hover {
 
 .about-content p {
     margin: 10px 0 0;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: var(--text-color);
 }
 
