@@ -293,10 +293,10 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.about-title {
+.about-title h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: #FCCB00;
 }
 
 .about-content {
