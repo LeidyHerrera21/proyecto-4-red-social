@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const btnAumentarTexto = document.getElementById("btn-reducir-texto");
+    const btnReducirTexto = document.getElementById("btn-reducir-texto");
     let fontSize = 16;
 
     btnAumentarTexto.addEventListener("click", function () {
