@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let fontSize = 16;
 
     btnAumentarTexto.addEventListener("click", function () {
-        fontSize -= 2;
+        fontSize += 2;
         document.body.style.fontSize = fontSize + "px";
     });
 });
