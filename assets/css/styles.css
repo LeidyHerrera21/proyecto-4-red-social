@@ -585,22 +585,24 @@ footer {
     color: var(--text-color);
 }
 
-/* Botón flotante para aumentar texto */
+/* Botón flotante - Aumentar texto */
 #btn-aumentar-texto {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px; /* Para que no se superponga con otros botones flotantes */
     left: 20px;
-    background-color: #00485E;
-    color: white;
+    background-color: #FCCB00;
+    color: #00485E;
     border: none;
     padding: 12px 16px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
+    font-weight: bold;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 #btn-aumentar-texto:hover {
-    background-color: #002F3E;
+    background-color: #E6B800;
+    transform: scale(1.1);
 }
