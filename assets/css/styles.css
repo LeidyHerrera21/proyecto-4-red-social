@@ -584,3 +584,23 @@ footer {
     font-size: 1rem;
     color: var(--text-color);
 }
+
+/* Botón flotante para aumentar texto */
+#btn-aumentar-texto {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #00485E;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+#btn-aumentar-texto:hover {
+    background-color: #002F3E;
+}
