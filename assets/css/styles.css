@@ -528,7 +528,7 @@ footer {
     position: absolute;
     top: 10px;
     /* Ajusta la altura */
-    right: 30px;
+    right: 40px;
     /* Mueve el contenedor a la derecha */
     display: flex;
     border-radius: 45px;
