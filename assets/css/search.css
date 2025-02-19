@@ -1,9 +1,9 @@
 /* Contenedor de la barra de búsqueda */
 .search-container {
     position: absolute;
-    top: 75px;
+    top: 70px;
     /* Ajusta la altura */
-    right: 8%;/* Mueve el contenedor a la derecha */
+    right: 8px;/* Mueve el contenedor a la derecha */
     display: flex;
     align-items: center;
     background: transparent;
@@ -63,4 +63,3 @@
 #search-button:hover {
     color: #00485E;
 }
-
