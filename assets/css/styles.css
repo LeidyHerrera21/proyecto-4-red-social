@@ -18,69 +18,57 @@ body {
     
 }
 
-.container {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 10px;
-    font-size: 23px;
-    height: auto;
-    position: relative;
-font-size: 50px;
-}
-
-.container3{
-
-    font-size: 80px;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
-
-
-/* Estilos del interruptor */
+/* 🔹 Botón flotante en la esquina inferior izquierda */
 .switch {
-    position: absolute;
-    display: inline-block;
+    position: fixed;
+    left: 20px;  /* Pegado a la izquierda */
+    bottom: 20px; /* Pegado abajo */
     width: 65px;
-    right: 1px;
-    top:700px;
-    /* Ajusta la altura */
-    left: 20px;
-    /* Mueve el contenedor a la derecha */
-    display: flex;
-    border-radius: 45px;
     height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 45px;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 5px;
+    cursor: pointer;
 }
 
-/* Ocultar checkbox real */
+/* 🔹 Mantener el botón visible y flotante en la esquina inferior izquierda */
+.switch {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 65px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 45px;
+    z-index: 9999; /* 🔥 Siempre visible */
+    background: rgba(255, 255, 255, 0.9); /* 🔥 Fondo semi-transparente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* 🔹 Ocultar checkbox real */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* Estilo de la barra deslizante */
+/* 🔹 Diseño de la barra deslizante */
 .slider {
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: #ccc;
     transition: 0.4s;
     border-radius: 34px;
 }
 
-/* Círculo que se desliza */
+/* 🔹 Círculo deslizante */
 .slider::before {
     content: "🌙";
     position: absolute;
@@ -97,37 +85,71 @@ header {
     font-size: 16px;
 }
 
-/* Estado activado */
-input:checked+.slider {
+/* 🔹 Cambios cuando se activa */
+input:checked + .slider {
     background-color: #eebb54;
 }
 
-/* Mueve el círculo y cambia icono */
-input:checked+.slider::before {
+/* 🔹 Movimiento del círculo y cambio de ícono */
+input:checked + .slider::before {
     transform: translateX(26px);
     content: "🔆";
 }
 
-/* Estilos específicos para el modo daltonismo */
-.daltonismo {
-    filter: contrast(120%) saturate(150%);
-}
-
-
-
-/* Estilos para el modo daltonismo */
-.daltonismo {
+/* 🔹 Estilos del Modo Daltonismo - Aplica a todo el sitio */
+.daltonismo, .daltonismo body, .daltonismo html {
     filter: contrast(120%) sepia(50%);
-    background-color: #FFF5E1 !important;
-    /* Fondo más claro */
-    color: #000 !important;
-    /* Texto en negro */
+    background-color: #FFF5E1 !important; /* 🔥 Fondo más claro */
+    color: #000 !important; /* 🔥 Texto negro para mayor contraste */
 }
 
+/* 🔹 Cambiar colores en el modo daltonismo */
 .daltonismo a {
-    color: #0033A0 !important;
-    /* Enlaces en azul fuerte */
+    color: #0033A0 !important; /* 🔥 Enlaces en azul fuerte */
 }
+
+.daltonismo header.scrolled {
+    background-color: rgb(60, 148, 148);
+    width: 100%;
+    height: 5px;
+}
+
+/* 🔹 Mantener el botón visible en modo daltonismo */
+.daltonismo .switch {
+    background: rgba(255, 255, 255, 0.9) !important; /* 🔥 Fondo del switch */
+    z-index: 9999 !important;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-size: 23px;
+    height: auto;
+    position:-ms-page;
+font-size: 50px;
+}
+
+.container3{
+
+    font-size: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(5, 5, 1, 0.5); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
+
 
 header {
     position: fixed;
@@ -141,27 +163,26 @@ header {
 }
 
 header.scrolled {
-    background-color: rgb(73, 184, 184);
+    background-color: rgb(60, 148, 148);
     width: 100%;
     height: 18%;
 }
 
 .logo-container {
     position: relative;
-    top: 50px;
-    /* Ajusta la altura */
-    left: 60px;
-    /* Mueve el contenedor a la derecha */
+    top: 20px; /* Ajuste menor de altura */
+    left: 20px; /* Menor desplazamiento horizontal */
     display: flex;
     align-items: center;
-    padding: 1px;
+    padding: 5px;
 }
 
-
 .logo {
-    height: 60px;
-    width: 250px;
-
+    height: 80px;
+    width: 150px;
+    position: relative; /* Permite que left y top funcionen */
+    top: 0;
+    left: 0;
 }
 
 nav ul {
@@ -417,38 +438,30 @@ footer {
     height: 24px;
 }
 
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: var(--primary-color);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-    }
-
-    nav ul.active {
-        display: flex;
+@media screen and (max-width: 480px) {
+    /* Ajustes adicionales para móviles pequeños */
+    .container {
+        font-size: 30px;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .logo {
+        height: 40px;
+        width: 150px;
+    }
+
+    .switch {
+        top: 600px;
     }
 }
+
 
 
 
@@ -497,7 +510,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
-    display: flex;
+    display:flex;
     align-items: center;
     gap: 10px;
 }
@@ -560,48 +573,169 @@ footer {
     transform: scale(0.95);
 }
 
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Dos columnas */
-    gap: 20px;
-    /* Espacio entre elementos */
-    font-size:25px ;
+    grid-template-columns: repeat(2, 1fr); /* Máximo 2 columnas por fila */
+    gap: 20px; /* Espacio entre elementos */
+    width: 100%;
+    max-width: 1200px; /* Ajusta según tu diseño */
+    margin: 0 auto; /* Centrar el grid */
+    padding: 10px; /* Espaciado interno */
 }
 
 .project-item {
     background: var(--background-light);
     padding: 20px;
     border-radius: 5px;
-    
-    /* Evita que las imágenes se desborden */
+    overflow: hidden; /* Evita desbordamientos */
 }
 
 .project-item img {
-    width: 100%;
-    /* La imagen ocupa el 100% del ancho del contenedor */
-    height: 200px;
-    /* Altura fija para todas las imágenes */
-    object-fit: cover;
-    /* Mantiene la relación de aspecto y cubre el contenedor */
-    border-radius: 5px;
-    /* Bordes redondeados */
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Mantiene la proporción y cubre el contenedor */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 .project-item h3 {
-    margin: 15px 0 10px;
-    font-size: 30px;
-    color: white;
-    
-}
-
-.project-item p {
-    font-size: 20px;
+    margin: 10px 0;
+    font-size: 1.5rem;
     color: var(--text-color);
 }
 
+.project-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
 .container2{
-    font-size: 30px;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) { 
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una sola columna en tablets y móviles */
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+
+    .project-item img {
+        height: 180px; /* Ajustar altura en pantallas más pequeñas */
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+.container h1 {
+    font-size: 3rem; /* Tamaño base */
+}
+
+.container p {
+    font-size: 1.5rem; /* Tamaño base */
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Botón */
+.container .btn {
+    display: inline-block;
+    font-size: 1.2rem; 
+    padding: 15px 25px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.container .btn:hover {
+    background-color: var(--accent-color);
+}
+/* Estilos para pantallas medianas (tablets) */
+@media screen and (max-width: 1024px) {
+    .container h1 {
+        font-size: 2.5rem;
+    }
+
+    .container p {
+        font-size: 1.3rem;
+    }
+
+    .container .btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    .container h1 {
+        font-size: 2rem; /* Reducir tamaño en móviles */
+    }
+
+    .container p {
+        font-size: 1.1rem;
+    }
+
+    .container .btn {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .container .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+.container5{
+    font-size: 25px;
+    text-align: center;
+    margin: 5%;
+    color: #ccc;
 }
 
 /* Botón flotante - Aumentar texto */
