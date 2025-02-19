@@ -279,11 +279,6 @@ nav ul li a:hover {
     padding: 0 20px;
 }
 
-.about {
-    padding: 50px 0;
-    background: var(--white);
-}
-
 .about-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
