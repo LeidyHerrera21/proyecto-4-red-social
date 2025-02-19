@@ -625,3 +625,25 @@ footer {
     background-color: #E6B800;
     transform: scale(1.1);
 }
+
+/* Botón flotante - reducir el texto */
+#btn-reducir-texto {
+    position: fixed;
+    bottom: 80px; /* Para que no se superponga con otros botones flotantes */
+    left: 30px;
+    background-color: #FCCB00;
+    color: #00485E;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#btn-aumentar-texto:hover {
+    background-color: #E6B800;
+    transform: scale(1.1);
+}
