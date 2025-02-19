@@ -19,7 +19,7 @@
     <header>
         <div class="container2">
             <div class="logo-container">
-                <img src="img/logo.png" alt="Logo de FUNDADES" class="logo">
+                <img src="img/logo-infodis-PNG_02.png" alt="Logo de FUNDADES" class="logo">
             </div>
             <nav aria-label="Menú principal">
                 <ul>
@@ -39,10 +39,7 @@
                 Iniciar sesión
             </button>
 
-            <label class="switch">
-                <input type="checkbox" id="modo-daltonismo">
-                <span class="slider"></span>
-            </label>
+
         </div>
     </header>
 
@@ -55,7 +52,7 @@
             <div class="hero-image" style="background-image: url('img/gettyimages-1345489103-2048x2048.jpg');"></div>
             <div class="hero-overlay"></div>
         </div>
-        <div class="container3">
+        <div class="container">
             <h1>INFODIS PERÚ</h1>
             <p>Sistema de Información e Inclusión Laboral para Personas con Discapacidad
                 Infórmate, capacítate y conecta con empresas inclusivas</p>
@@ -70,9 +67,6 @@
     </div>
 
     <button id="chatbot-button">Ir al Chat IA</button>
-
-    <button id="btn-aumentar-texto">A+</button>
-    <button id="btn-reducir-texto">A-</button>
 
     <section id="nosotros" class="about">
         <div class="container1">
@@ -150,11 +144,12 @@
     </section> <br><br>
 
     <section id="unete" class="join">
-        <div class="container4">
+        <div class="container5">
 
             <h2>Únete a Nosotros</h2>
             <p>En FUNDADES, creemos en la inclusión laboral de personas con discapacidad. Si estás buscando
                 oportunidades laborales, sube tu currículum y forma parte de nuestra red de talentos.</p>
+                <br>
             <form id="cv-form" action="submit_cv.php" method="post" enctype="multipart/form-data"
                 aria-labelledby="unete">
                 <label for="name">Nombre:</label>
@@ -177,27 +172,34 @@
 
 
     <footer>
-        <div class="container5">
-            <p>&copy; 2023 FUNDADES. Todos los derechos reservados.</p>
+        <div class="container">
+            <p>&copy; 2023 INFODIS PERÚ. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="https://www.facebook.com/infodisperu" target="_blank" aria-label="Facebook">
                     <img src="img/facebook-icon.png" alt="Facebook">
                 </a>
-                <a href="https://www.linkedin.com/company/grupo-fundades-peru" target="_blank" aria-label="Twitter">
-                    <img src="img/images.png" alt="Twitter">
+                <a href="https://www.linkedin.com/company/grupo-fundades-peru" target="_blank" aria-label="In">
+                    <img src="img/images.png" alt="in">
                 </a>
-                <a href="https://www.instagram.com/grupofundades/" target="_blank" aria-label="Twitter">
-                    <img src="img/instagram-icon.png" alt="Twitter">
+                <a href="https://x.com/infodisperu" target="_blank" aria-label="X">
+                    <img src="img/x.png" alt="X">
+                </a>
+                <a href="https://www.youtube.com/user/GFundades" target="_blank" aria-label="youtube">
+                    <img src="img/49620.png" alt="youtube">
                 </a>
             </div>
         </div>
-    </footer>
+
+        <label class="switch">
+            <input type="checkbox" id="modo-daltonismo">
+            <span class="slider"></span>
+        </label>
     <script type="module" src="assets/js/firebase.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/daltonismo.js"></script>
     <script src="assets/js/aumento.js"></script>
     <script src="assets/js/reducir.js"></script>
-
+ </footer>
 </body>
 
 </html>
