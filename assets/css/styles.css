@@ -643,7 +643,7 @@ footer {
     transition: background 0.3s, transform 0.2s;
 }
 
-#btn-aumentar-texto:hover {
+#btn-reducir-texto:hover {
     background-color: #E6B800;
     transform: scale(1.1);
 }
