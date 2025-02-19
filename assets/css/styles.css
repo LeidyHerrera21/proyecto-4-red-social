@@ -284,10 +284,10 @@ nav ul li a:hover {
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    background: #fff;
+     display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas del mismo tamaño */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
 }
 
 .about-item {
