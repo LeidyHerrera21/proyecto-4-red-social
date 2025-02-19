@@ -50,6 +50,7 @@ header h1 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
     padding: 20px;
+    font-size: 25px;
 }
 
 /* Caja de chat */
