@@ -47,7 +47,7 @@ header {
     position: absolute;
     display: inline-block;
     width: 65px;
-    right: 1px;
+    right: 1290px;
     top:530px;
     /* Ajusta la altura */
     right: 1290px;
@@ -68,9 +68,9 @@ header {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 530px;
+    top: 0;
     left: 0;
-    right: 1290px;
+    right: 0;
     bottom: 0;
     background-color: #ccc;
     transition: 0.4s;
