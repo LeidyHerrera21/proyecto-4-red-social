@@ -303,6 +303,7 @@ nav ul li a:hover {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease, padding 0.5s ease;
+    color: #FCCB00;
 }
 
 .about-content p {
