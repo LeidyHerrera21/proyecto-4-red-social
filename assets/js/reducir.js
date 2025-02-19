@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     const btnAumentarTexto = document.getElementById("btn-reducir-texto");
     let fontSize = 16;
 
@@ -7,3 +7,4 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.fontSize = fontSize + "px";
     });
 });
+*/
