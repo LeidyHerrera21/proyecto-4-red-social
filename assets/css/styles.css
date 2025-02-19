@@ -630,7 +630,7 @@ footer {
 #btn-reducir-texto {
     position: fixed;
     bottom: 80px; /* Para que no se superponga con otros botones flotantes */
-    left: 50px;
+    left: 80px;
     background-color: #FCCB00;
     color: #00485E;
     border: none;
