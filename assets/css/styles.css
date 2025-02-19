@@ -68,9 +68,9 @@ header {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
+    top: 530px;
     left: 0;
-    right: 0;
+    right: 1290px;
     bottom: 0;
     background-color: #ccc;
     transition: 0.4s;
