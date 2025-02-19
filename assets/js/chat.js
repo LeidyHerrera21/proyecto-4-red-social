@@ -6,29 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Lista de preguntas y respuestas frecuentes con enlaces clickeables
     const faqData = [
-        { 
-            question: "¿Cuál es el número de contacto?", 
-            answer: 'Puedes contactarnos al número +51 949 565 477.' 
+        {
+            question: "¿Cuál es el número de contacto?",
+            answer: 'Puedes contactarnos al número  511-391-3300.'
         },
-        { 
-            question: "¿Dónde se encuentran?", 
-            answer: 'Nos ubicamos en <a href="https://www.google.com/maps/place/Jr.+Alfredo+Silva+180,+Barranco+15063/@-12.155262,-77.023144,17z" target="_blank" style="color: #00485E; font-weight: bold;">Jr. Alfredo Silva 180, Barranco</a>.' 
+        {
+            question: "¿Dónde se encuentran?",
+            answer: 'Nos ubicamos en <a href="https://bit.ly/3wZQY7v" target="_blank" style="color: #00485E; font-weight: bold;">Jr. Alfredo Silva 180, Barranco</a>.'
         },
-        { 
-            question: "¿Cuáles son los horarios de atención?", 
-            answer: "Nuestro horario es de lunes a viernes de 8:30 AM a 5:30 PM." 
+        {
+            question: "¿Cuáles son los horarios de atención?",
+            answer: "Nuestro horario es de lunes a viernes de 8:30 AM a 5:30 PM."
         },
-        { 
-            question: "¿Cómo puedo hacer una donación?", 
-            answer: 'Puedes donar a través de nuestra web en la sección Donaciones.' 
+        {
+            question: "¿Qué servicios ofrece Infodis Perú?",
+            answer: 'Conexión entre empresas inclusivas y personas con discapacidad, Buscador de instituciones y servicios para personas con discapacidad, Noticias, eventos y talleres actualizados sobre discapacidad e inclusión y Cursos de capacitación gratuitos, como Call Center, para fomentar habilidades laborales.'
         },
-        { 
-            question: "¿Cómo puedo ser voluntario?", 
-            answer: 'Para ser voluntario, completa el formulario en nuestra sección de Voluntariado.' 
+        {
+            question: "¿Infodis Perú cobra por sus servicios?",
+            answer: 'No, los servicios y capacitaciones ofrecidos por Infodis Perú son gratuitos.'
         },
-        { 
-            question: "¿Cómo puedo enviar mi CV?", 
-            answer: 'Puedes enviarnos tu CV en la sección Trabaja con Nosotros ubicada en el menú principal.' 
+        {
+            question: "¿Cómo puedo enviar mi CV?",
+            answer: 'Puedes enviarnos tu CV en la sección Trabaja con Nosotros ubicada en el menú principal.'
         }
     ];
 
