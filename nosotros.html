@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FUNDADES - Fundación para el Desarrollo Sostenible. Promovemos proyectos sociales para mejorar la calidad de vida de personas vulnerables en el Perú.">
+    <meta name="keywords"
+        content="FUNDADES, desarrollo sostenible, Perú, proyectos sociales, discapacidad, salud, niñez, educación, trabajo">
+    <meta name="author" content="FUNDADES">
+    <title>FUNDADES - Desarrollo Sostenible en el Perú</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container2">
+            <div class="logo-container">
+                <img src="img/logo-infodis-PNG_02.png" alt="Logo de FUNDADES" class="logo">
+            </div>
+            <nav aria-label="Menú principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Servicios</a></li>
+                    <li><a href="#proyectos">Recursos</a></li>
+                    <li><a href="#unete">Únete a Nosotros</a></li>
+                    <li><a href="#contacto">Noticias</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+            <!-- Botón de Google y switch aquí -->
+            <button id="login-google" class="google-btn">
+                <img src="img/descarga.png" alt="Google Logo">
+                Iniciar sesión
+            </button>
+
+
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-images">
+            <div class="hero-image active" style="background-image: url('img/gettyimages-1192468274-2048x2048.jpg');">
+            </div>
+            <div class="hero-image" style="background-image: url('img/gettyimages-1250476306-2048x2048.jpg');"></div>
+            <div class="hero-image" style="background-image: url('img/gettyimages-487536795-2048x2048.jpg');"></div>
+            <div class="hero-image" style="background-image: url('img/gettyimages-1345489103-2048x2048.jpg');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <h1>INFODIS PERÚ</h1>
+            <p>Sistema de Información e Inclusión Laboral para Personas con Discapacidad
+                Infórmate, capacítate y conecta con empresas inclusivas</p>
+            <a href="#nosotros" class="btn">Conócenos más</a>
+        </div>
+    </section>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Buscar...">
+        <button id="search-button">🔍</button>
+    </div>
+
+    <button id="chatbot-button">Ir al Chat IA</button>
+
+    <button id="btn-aumentar-texto">A+</button>
+    <button id="btn-reducir-texto">A-</button>
+
+    <section id="unete" class="join">
+        <div class="container5">
+
+            <h2>Únete a Nosotros</h2>
+            <p>En FUNDADES, creemos en la inclusión laboral de personas con discapacidad. Si estás buscando
+                oportunidades laborales, sube tu currículum y forma parte de nuestra red de talentos.</p>
+                <br>
+            <form id="cv-form" action="submit_cv.php" method="post" enctype="multipart/form-data"
+                aria-labelledby="unete">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required aria-required="true">
+
+                <label for="cv">Subir CV (PDF o Word):</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required aria-required="true">
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <br><br>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 INFODIS PERÚ. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/infodisperu" target="_blank" aria-label="Facebook">
+                    <img src="img/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/company/grupo-fundades-peru" target="_blank" aria-label="In">
+                    <img src="img/images.png" alt="in">
+                </a>
+                <a href="https://x.com/infodisperu" target="_blank" aria-label="X">
+                    <img src="img/x.png" alt="X">
+                </a>
+                <a href="https://www.youtube.com/user/GFundades" target="_blank" aria-label="youtube">
+                    <img src="img/49620.png" alt="youtube">
+                </a>
+            </div>
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="modo-daltonismo">
+            <span class="slider"></span>
+        </label>
+    <script type="module" src="assets/js/firebase.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/daltonismo.js"></script>
+    <script src="assets/js/aumento.js"></script>
+    <script src="assets/js/reducir.js"></script>
+ </footer>
+</body>
+
+</html>
