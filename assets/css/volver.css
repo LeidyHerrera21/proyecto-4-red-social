@@ -1,6 +1,6 @@
 #volver-btn {
     position: absolute; /* O fixed si quieres que el botón se mantenga en su posición al hacer scroll */
-    top: 20px; /* Ajusta según sea necesario */
+    top: 60px; /* Ajusta según sea necesario */
     right: 20px; /* Ajusta según sea necesario */
     background-color: #FCCB00;
     color: #00485E;
