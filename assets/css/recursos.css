@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #fcca00b9;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.google-btn {
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.google-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Section for resources */
+.recursos {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.recursos h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.recursos-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.recurso {
+    flex: 1;
+    min-width: 280px;
+    background-color: #1c49aa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recurso:hover {
+    transform: translateY(-10px);
+}
+
+.recurso img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.recurso h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.recurso p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recursos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recurso {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Footer Styles */
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
