@@ -1,7 +1,7 @@
 #volver-btn {
-    position: absolute;
-    top: 60px; /* Ajusta según la altura del botón de inicio de sesión */
-    right: 20px; /* Ajusta según el margen derecho deseado */
+    position: absolute; /* O fixed si quieres que el botón se mantenga en su posición al hacer scroll */
+    top: 20px; /* Ajusta según sea necesario */
+    right: 20px; /* Ajusta según sea necesario */
     background-color: #FCCB00;
     color: #00485E;
     border: none;
@@ -9,6 +9,7 @@
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
+    z-index: 1000; /* Asegura que el botón esté encima de las imágenes */
 }
 
 #volver-btn:hover {
