@@ -185,7 +185,12 @@ header.scrolled {
     left: 50px;
 }
 
+nav {
+    display: flex;
+}
+
 nav ul {
+    flex: 1;
     list-style: none;
     padding: 0;
     display: flex;
@@ -194,6 +199,9 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li a {
@@ -201,6 +209,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-size: 20px;
 }
 
 nav ul li a:hover {
@@ -459,9 +468,20 @@ footer {
     .switch {
         top: 680px;
     }
+
+    nav {
+        flex-direction: column; 
+    }
+
+    nav img {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 }
-
-
 
 
 .join {
