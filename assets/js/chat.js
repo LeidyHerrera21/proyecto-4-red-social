@@ -8,11 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const faqData = [
         {
             question: "¿Cuál es el número de contacto?",
-            answer: 'Puedes contactarnos al número  511-391-3300.'
+            answer: 'Puedes contactarnos al número <a href="https://api.whatsapp.com/send/?phone=51949565477&text=Hola%21+Necesito+m%C3%A1s+informaci%C3%B3n.&type=phone_number&app_absent=0" target="_blank" style="color: #00485E; font-weight: bold;">+51 949 565 477</a>.'
         },
+        
         {
             question: "¿Dónde se encuentran?",
-            answer: 'Nos ubicamos en <a href="https://bit.ly/3wZQY7v" target="_blank" style="color: #00485E; font-weight: bold;">Jr. Alfredo Silva 180, Barranco</a>.'
+            answer: 'Nos ubicamos en <a href="https://www.google.com/maps/dir//Jr.+Alfredo+Silva+180+Barranco+15063/@-12.1552622,-77.023144,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105b7925cf938af:0x64a15cb7e048ce75!2m2!1d-77.023144!2d-12.1552622?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: #00485E; font-weight: bold;">Jr. Alfredo Silva 180, Barranco</a>.'
         },
         {
             question: "¿Cuáles son los horarios de atención?",
@@ -82,4 +83,5 @@ document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("modoDaltonismo") === "activado") {
         document.body.classList.add("daltonismo");
     }
+    
 });
