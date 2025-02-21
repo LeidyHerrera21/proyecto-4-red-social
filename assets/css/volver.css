@@ -1,0 +1,13 @@
+#volver-btn {
+    background-color: #FCCB00;
+    color: #00485E;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#volver-btn:hover {
+    background-color: #e6b800;
+}
