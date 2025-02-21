@@ -1,4 +1,21 @@
 window.onload = function () {
+    // 📌 Menú Hamburguesa solo en móviles
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("nav");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+
+        // Cerrar menú si se hace clic en un enlace
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            link.addEventListener("click", function () {
+                navMenu.classList.remove("active");
+            });
+        });
+    }
+
     // 📌 Validación del formulario de CV
     const cvForm = document.getElementById('cv-form');
     if (cvForm) {
@@ -6,8 +23,7 @@ window.onload = function () {
             e.preventDefault();
             const fileInput = document.getElementById('cv');
             const file = fileInput.files[0];
-            const validTypes = ["application/pdf", "application/msword", 
-                "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+            const validTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
 
             if (file && validTypes.includes(file.type)) {
                 alert('Gracias por enviar tu currículum. Nos pondremos en contacto contigo pronto.');
@@ -21,38 +37,32 @@ window.onload = function () {
     // 📌 Cambio de imágenes de fondo con transición suave
     const heroImages = document.querySelectorAll('.hero-image');
     let currentImageIndex = 0;
-    
+
     if (heroImages.length > 0) {
         function changeBackgroundImage() {
             heroImages.forEach((img, index) => img.style.opacity = index === currentImageIndex ? "1" : "0");
             currentImageIndex = (currentImageIndex + 1) % heroImages.length;
         }
         setInterval(changeBackgroundImage, 5000);
-        changeBackgroundImage(); // Ejecutar al inicio
+        changeBackgroundImage();
     }
 
     // 📌 Header con scroll (sin sobrecargar eventos)
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+            header.classList.toggle('scrolled', window.scrollY > 50);
         });
     }
 
-    // 📌 Acordeón de "Nosotros" (solo uno abierto a la vez)
+    // 📌 Acordeón de "Nosotros"
     const aboutTitles = document.querySelectorAll('.about-title');
     if (aboutTitles.length > 0) {
         aboutTitles.forEach(title => {
             title.addEventListener('click', () => {
-                // Cierra los demás
                 document.querySelectorAll('.about-item').forEach(item => {
                     if (item !== title.parentElement) item.classList.remove('active');
                 });
-                // Alternar el seleccionado
                 title.parentElement.classList.toggle('active');
             });
         });
@@ -74,15 +84,13 @@ window.onload = function () {
         });
     }
 
-    // 📌 Mover la barra de búsqueda al header (mejor manejo de errores)
-    const searchContainer = document.querySelector('.search-container');
-    if (header && searchContainer) {
-        header.appendChild(searchContainer);
-    }
-
-    // 📌 Redirección al chatbot
-    const chatbotButton = document.getElementById('chatbot-button');
-    if (chatbotButton) {
-        chatbotButton.addEventListener('click', () => window.location.href = 'chat.html');
+    // 📌 Redirección al Chat IA
+    const chatBotButton = document.getElementById("chatbot-button");
+    if (chatBotButton) {
+        chatBotButton.addEventListener("click", function () {
+            window.location.href = "chat.html";
+        });
+    } else {
+        console.error("⚠️ Error: No se encontró el botón de Chat IA");
     }
 };
