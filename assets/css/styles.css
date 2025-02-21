@@ -39,14 +39,14 @@ body {
 .switch {
     position: fixed;
     left: 20px;
-    bottom: 20px;
+    bottom: 25px;
     width: 65px;
-    height: 35px;
+    height: 30px;
     display: flex;
     align-items: center;
     border-radius: 45px;
     z-index: 9999; /* 🔥 Siempre visible */
-    background: rgba(255, 255, 255, 0.9); /* 🔥 Fondo semi-transparente */
+    background: rgba(168, 157, 157, 0.9); /* 🔥 Fondo semi-transparente */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 5px;
     cursor: pointer;
@@ -156,9 +156,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
     z-index: 1000;
-    background-color: transparent;
+    background-color: rgba(250, 250, 243, 0);
     transition: background-color 0.3s ease;
 }
 
@@ -178,11 +178,11 @@ header.scrolled {
 }
 
 .logo {
-    height: 80px;
-    width: 150px;
+    height: 75px;
+    width: 180px;
     position: relative; /* Permite que left y top funcionen */
     top: 0;
-    left: 0;
+    left: 50px;
 }
 
 nav ul {
@@ -338,10 +338,9 @@ nav ul li a:hover {
 }
 
 .about-content p {
-    margin: 10px 0 0;
     font-size: 1rem;
     color: var(--text-color);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .about-item.active .about-content {
@@ -458,7 +457,7 @@ footer {
     }
 
     .switch {
-        top: 600px;
+        top: 680px;
     }
 }
 
@@ -529,9 +528,32 @@ footer {
 .daltonismo #chatbot-button {
     display: block !important;
     filter: none !important;
-    background-color: #FCCB00 !important;
-    color: #00485E !important;
+    background-color: #bda622 !important;
+    color: #120d3b !important;
 }
+@media (max-width: 780px) {
+    #chatbot-button {
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    #chatbot-button::before {
+        content: "🤖";
+        font-size: 24px;
+    }
+
+    #chatbot-button {
+        font-size: 0; /* Oculta el texto original */
+    }
+}
+
 
 .google-btn {
     display: flex;
@@ -619,17 +641,99 @@ footer {
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1001; /* Asegura que esté por encima del menú */
     }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Oculto por defecto */
+        width: 250px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+        transition: left 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        z-index: 1000;
+    }
+
+    .mobile-menu.active {
+        left: 0; /* Se desliza a la vista */
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu ul li {
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .mobile-menu ul li a {
+        color: rgb(253, 254, 255);
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        transition: background 0.3s;
+    }
+
+    .mobile-menu ul li a:hover {
+        background: rgba(255, 255, 255, 0.671);
+    }
+/* 🔹 Ocultar el menú en móviles */
 
     nav ul {
-        display: none;
+        display: flex;
         flex-direction: column;
+        padding-top: 60px;
     }
 
-    nav ul.active {
-        display: flex;
+    nav ul li {
+        padding: 15px;
+        text-align: left;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Inicialmente oculto */
+        width: 70%;
+        height: 100vh;
+        background: rgba(11, 26, 66, 0.9); /* Fondo con opacidad */
+        backdrop-filter: blur(10px);
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    nav.active {
+        left: 0; /* Se muestra cuando tiene la clase "active" */
     }
 }
+
 /* Reseteo básico */
 * {
     margin: 0;
@@ -738,10 +842,11 @@ body {
     color: #ccc;
 }
 
-/* Botón flotante - Aumentar texto */
-#btn-aumentar-texto {
+/* 📌 Estilos generales de los botones flotantes */
+#btn-aumentar-texto, 
+#btn-reducir-texto {
     position: fixed;
-    bottom: 80px; /* Para que no se superponga con otros botones flotantes */
+    bottom: 80px; /* Posición normal en pantallas grandes */
     left: 20px;
     background-color: #FCCB00;
     color: #00485E;
@@ -755,29 +860,44 @@ body {
     transition: background 0.3s, transform 0.2s;
 }
 
-#btn-aumentar-texto:hover {
-    background-color: #E6B800;
-    transform: scale(1.1);
-}
-
-/* Botón flotante - reducir el texto */
+/* 🔵 Botón de reducir a la derecha del de aumentar */
 #btn-reducir-texto {
-    position: fixed;
-    bottom: 80px; /* Para que no se superponga con otros botones flotantes */
     left: 80px;
-    background-color: #FCCB00;
-    color: #00485E;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.2s;
 }
 
+/* ✨ Efecto Hover */
+#btn-aumentar-texto:hover,
 #btn-reducir-texto:hover {
     background-color: #E6B800;
     transform: scale(1.1);
+}
+
+/* 📱 Modo Teléfonos Pequeños: Botones arriba */
+@media (max-width: 768px) {
+    #btn-aumentar-texto, 
+    #btn-reducir-texto {
+        top: 10px; /* Ahora están ARRIBA */
+        bottom: auto; /* Eliminamos la posición inferior */
+        left: 10px;
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+
+    #btn-reducir-texto {
+        left: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    #btn-aumentar-texto, 
+    #btn-reducir-texto {
+        top: 95px; /* Más pegados arriba */
+        left: 5px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    #btn-reducir-texto {
+        left: 60px;
+    }
 }
