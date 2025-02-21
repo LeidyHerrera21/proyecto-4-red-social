@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const volverBtn = document.getElementById("volver-btn");
 
-// Botón volver (redirecciona a la página principal)
-    volverBtn.addEventListener("click", function () {
-        window.location.href = "index.html";
-    });
+    if (volverBtn) {
+        volverBtn.addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+    } else {
+        console.error("No se encontró el botón con ID 'volver-btn'");
+    }
+});
