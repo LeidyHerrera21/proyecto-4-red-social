@@ -1,0 +1,783 @@
+:root {
+    --primary-color: #93b2b6;
+    --secondary-color: #34a853;
+    --accent-color: #fccb00;
+    --background-light: #00485E;
+    --text-color: #ffffff;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Azbuka Pro Regular', Azbuka Pro Bold;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+    position: relative;
+
+}
+
+/* 🔹 Botón flotante en la esquina inferior izquierda */
+.switch {
+    position: fixed;
+    left: 20px;  /* Pegado a la izquierda */
+    bottom: 20px; /* Pegado abajo */
+    width: 65px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 45px;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* 🔹 Mantener el botón visible y flotante en la esquina inferior izquierda */
+.switch {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 65px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 45px;
+    z-index: 9999; /* 🔥 Siempre visible */
+    background: rgba(168, 157, 157, 0.9); /* 🔥 Fondo semi-transparente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* 🔹 Ocultar checkbox real */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* 🔹 Diseño de la barra deslizante */
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* 🔹 Círculo deslizante */
+.slider::before {
+    content: "🌙";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* 🔹 Cambios cuando se activa */
+input:checked + .slider {
+    background-color: #eebb54;
+}
+
+/* 🔹 Movimiento del círculo y cambio de ícono */
+input:checked + .slider::before {
+    transform: translateX(26px);
+    content: "🔆";
+}
+
+/* 🔹 Estilos del Modo Daltonismo - Aplica a todo el sitio */
+.daltonismo, .daltonismo body, .daltonismo html {
+    filter: contrast(120%) sepia(50%);
+    background-color: #FFF5E1 !important; /* 🔥 Fondo más claro */
+    color: #000 !important; /* 🔥 Texto negro para mayor contraste */
+}
+
+/* 🔹 Cambiar colores en el modo daltonismo */
+.daltonismo a {
+    color: #0033A0 !important; /* 🔥 Enlaces en azul fuerte */
+}
+
+.daltonismo header.scrolled {
+    background-color: rgb(60, 148, 148);
+    width: 100%;
+    height: 5px;
+}
+
+/* 🔹 Mantener el botón visible en modo daltonismo */
+.daltonismo .switch {
+    background: rgba(255, 255, 255, 0.9) !important; /* 🔥 Fondo del switch */
+    z-index: 9999 !important;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-size: 23px;
+    height: auto;
+    position:-ms-page;
+font-size: 50px;
+}
+
+.container3{
+
+    font-size: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(5, 5, 1, 0.5); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+    background-color: rgba(141, 141, 59, 0);
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgb(60, 148, 148);
+    width: 100%;
+    height: 18%;
+}
+
+.logo-container {
+    position: relative;
+    top: 20px; /* Ajuste menor de altura */
+    left: 20px; /* Menor desplazamiento horizontal */
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo {
+    height: 80px;
+    width: 150px;
+    position: relative; /* Permite que left y top funcionen */
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.hero-image.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero .btn {
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: var(--accent-color);
+}
+
+
+.container1 {
+    color: black;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 30px;
+}
+
+.about {
+    padding: 50px 0;
+    background: var(--white);
+}
+
+.about-grid {
+    display: grid;
+
+    gap: 20px;
+}
+
+.about-item {
+    background: var(--background-light);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.about-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    font-size: 20px;
+}
+
+.about-content p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.about-item.active .about-content {
+    max-height: 200px;
+    padding-top: 10px;
+}
+
+
+.news {
+    padding: 50px 0;
+    background: var(--white);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.news-item {
+    background: var(--background-light);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.news-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+
+.faq {
+    padding: 50px 0;
+    background: var(--background-light);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.faq-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+    color: black
+}
+
+.contact {
+    padding: 50px 0;
+    background: var(--background-light);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes adicionales para móviles pequeños */
+    .container {
+        font-size: 30px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        height: 40px;
+        width: 150px;
+    }
+
+    .switch {
+        top: 600px;
+    }
+}
+
+
+
+
+.join {
+    padding: 50px 0;
+    background: var(--background-light);
+}
+
+.join form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join form input,
+.join form textarea,
+.join form input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.join form button {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Chat IA */
+#chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#chatbot-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+#chatbot-button::before {
+    content: '🤖';
+    /* Emoji de robot */
+    font-size: 20px;
+}
+
+.daltonismo #chatbot-button {
+    display: block !important;
+    filter: none !important;
+    background-color: #FCCB00 !important;
+    color: #00485E !important;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: #fffdfd;
+    border: 5px solid #020101;
+    border-radius: 55px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(175, 165, 165, 0.1);
+    position: absolute;
+    top: 10px;
+    /* Ajusta la altura */
+    right: 10px;
+    /* Mueve el contenedor a la derecha */
+    display: flex;
+    border-radius: 45px;
+    height: 35px;
+
+}
+
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.google-btn:hover {
+    background-color: #221c1c;
+    border-color: #000000;
+}
+
+.google-btn:active {
+    transform: scale(0.95);
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Máximo 2 columnas por fila */
+    gap: 20px; /* Espacio entre elementos */
+    width: 100%;
+    max-width: 1200px; /* Ajusta según tu diseño */
+    margin: 0 auto; /* Centrar el grid */
+    padding: 10px; /* Espaciado interno */
+}
+
+.project-item {
+    background: var(--background-light);
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden; /* Evita desbordamientos */
+}
+
+.project-item img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Mantiene la proporción y cubre el contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.project-item h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.container2{
+    font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) { 
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una sola columna en tablets y móviles */
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+
+    .project-item img {
+        height: 180px; /* Ajustar altura en pantallas más pequeñas */
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+.container h1 {
+    font-size: 3rem; /* Tamaño base */
+}
+
+.container p {
+    font-size: 1.5rem; /* Tamaño base */
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Botón */
+.container .btn {
+    display: inline-block;
+    font-size: 1.2rem; 
+    padding: 15px 25px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.container .btn:hover {
+    background-color: var(--accent-color);
+}
+/* Estilos para pantallas medianas (tablets) */
+@media screen and (max-width: 1024px) {
+    .container h1 {
+        font-size: 2.5rem;
+    }
+
+    .container p {
+        font-size: 1.3rem;
+    }
+
+    .container .btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    .container h1 {
+        font-size: 2rem; /* Reducir tamaño en móviles */
+    }
+
+    .container p {
+        font-size: 1.1rem;
+    }
+
+    .container .btn {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .container .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+.container5{
+    font-size: 25px;
+    text-align: center;
+    margin: 5%;
+    color: #ccc;
+}
+
+/* Botón flotante - Aumentar texto */
+#btn-aumentar-texto {
+    position: fixed;
+    bottom: 80px; /* Para que no se superponga con otros botones flotantes */
+    left: 20px;
+    background-color: #FCCB00;
+    color: #00485E;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#btn-aumentar-texto:hover {
+    background-color: #E6B800;
+    transform: scale(1.1);
+}
+
+/* Botón flotante - reducir el texto */
+#btn-reducir-texto {
+    position: fixed;
+    bottom: 80px; /* Para que no se superponga con otros botones flotantes */
+    left: 80px;
+    background-color: #FCCB00;
+    color: #00485E;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#btn-reducir-texto:hover {
+    background-color: #E6B800;
+    transform: scale(1.1);
+}
